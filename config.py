@@ -7,27 +7,21 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID","26618354")
+API_HASH = getenv("API_HASH","a661ba83d609575d745f6855f4d25a8c")
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN","6366312360:AAHVU7Wlvb6hNRLwXvGzlA_ciNvDWxh-u6c")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI","mongodb+srv://Bikash:Bikash@bikash.yl2nhcy.mongodb.net/?retryWrites=true&w=majority")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 16000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID"))
+LOGGER_ID = int(getenv("LOGGER_ID","1776080292")
 
 # Get this value from  on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID"))
-
-## Fill these variables if you're deploying on heroku.
-# Your heroku app name
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-# Get it from http://dashboard.heroku.com/account
-HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+OWNER_ID = int(getenv("OWNER_ID","-1002056114480")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
@@ -61,11 +55,11 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @VIP_STRING_ROBOT on Telegram
-STRING1 = getenv("STRING_SESSION", None)
-STRING2 = getenv("STRING_SESSION2", None)
-STRING3 = getenv("STRING_SESSION3", None)
-STRING4 = getenv("STRING_SESSION4", None)
-STRING5 = getenv("STRING_SESSION5", None)
+STRING1 = getenv("STRING_SESSION","BQGWKfIAt-C5CRkwlDZH2utHEvrwH32VtdrSO5-0oefyJj8HRRLaS7ABI0Gsfxg2J-v8ZLeH29d3KPoWY4z5ELBwgle0k-tud72_vyG1lXHbHS5Rm6VBhmPWQgfZ7145Z_fvndLOCcw2xR4WizTOki-WDRK-g7npMZSz0Mw90GbnM26uaF1bZUtR2C6Dinay9ynhz6XhPibqzZP9gi8P4voa-gC0GrOAEdabYk2wcLLhWKrfL92BrALFHrKkPzpWIMxoB2rBp578x6o6nDprcBNQj4YjV-05w38MatoA2Jc3pJXwC-l__vdg5XReuUU3iNds_D5IwmZmwO-NkbyFTRvc5bTapAAAAABp3NWkAA")
+STRING2 = getenv("STRING_SESSION2","BQGWKfIAt-C5CRkwlDZH2utHEvrwH32VtdrSO5-0oefyJj8HRRLaS7ABI0Gsfxg2J-v8ZLeH29d3KPoWY4z5ELBwgle0k-tud72_vyG1lXHbHS5Rm6VBhmPWQgfZ7145Z_fvndLOCcw2xR4WizTOki-WDRK-g7npMZSz0Mw90GbnM26uaF1bZUtR2C6Dinay9ynhz6XhPibqzZP9gi8P4voa-gC0GrOAEdabYk2wcLLhWKrfL92BrALFHrKkPzpWIMxoB2rBp578x6o6nDprcBNQj4YjV-05w38MatoA2Jc3pJXwC-l__vdg5XReuUU3iNds_D5IwmZmwO-NkbyFTRvc5bTapAAAAABp3NWkAA")
+STRING3 = getenv("STRING_SESSION3","BQGWKfIAt-C5CRkwlDZH2utHEvrwH32VtdrSO5-0oefyJj8HRRLaS7ABI0Gsfxg2J-v8ZLeH29d3KPoWY4z5ELBwgle0k-tud72_vyG1lXHbHS5Rm6VBhmPWQgfZ7145Z_fvndLOCcw2xR4WizTOki-WDRK-g7npMZSz0Mw90GbnM26uaF1bZUtR2C6Dinay9ynhz6XhPibqzZP9gi8P4voa-gC0GrOAEdabYk2wcLLhWKrfL92BrALFHrKkPzpWIMxoB2rBp578x6o6nDprcBNQj4YjV-05w38MatoA2Jc3pJXwC-l__vdg5XReuUU3iNds_D5IwmZmwO-NkbyFTRvc5bTapAAAAABp3NWkAA")
+STRING4 = getenv("STRING_SESSION4","BQGWKfIAt-C5CRkwlDZH2utHEvrwH32VtdrSO5-0oefyJj8HRRLaS7ABI0Gsfxg2J-v8ZLeH29d3KPoWY4z5ELBwgle0k-tud72_vyG1lXHbHS5Rm6VBhmPWQgfZ7145Z_fvndLOCcw2xR4WizTOki-WDRK-g7npMZSz0Mw90GbnM26uaF1bZUtR2C6Dinay9ynhz6XhPibqzZP9gi8P4voa-gC0GrOAEdabYk2wcLLhWKrfL92BrALFHrKkPzpWIMxoB2rBp578x6o6nDprcBNQj4YjV-05w38MatoA2Jc3pJXwC-l__vdg5XReuUU3iNds_D5IwmZmwO-NkbyFTRvc5bTapAAAAABp3NWkAA")
+STRING5 = getenv("STRING_SESSION5","BQGWKfIAt-C5CRkwlDZH2utHEvrwH32VtdrSO5-0oefyJj8HRRLaS7ABI0Gsfxg2J-v8ZLeH29d3KPoWY4z5ELBwgle0k-tud72_vyG1lXHbHS5Rm6VBhmPWQgfZ7145Z_fvndLOCcw2xR4WizTOki-WDRK-g7npMZSz0Mw90GbnM26uaF1bZUtR2C6Dinay9ynhz6XhPibqzZP9gi8P4voa-gC0GrOAEdabYk2wcLLhWKrfL92BrALFHrKkPzpWIMxoB2rBp578x6o6nDprcBNQj4YjV-05w38MatoA2Jc3pJXwC-l__vdg5XReuUU3iNds_D5IwmZmwO-NkbyFTRvc5bTapAAAAABp3NWkAA")
 
 
 #    __      _______ _____    ___  __ _    _  _____ _____ _____   _____   ____ _______ 
